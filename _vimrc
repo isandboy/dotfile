@@ -283,6 +283,8 @@ au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\
 " Don't let pyflakes use the quickfix window
 let g:pyflakes_use_quickfix = 0
 
+au FileType python set ft=python.django
+au FileType html set ft=htmldjango.html
 
 
 " Add the virtualenv's site-packages to vim path

@@ -1,4 +1,10 @@
+#git config --global core.excludesfile ~/.gitignore_global 
+
 .DS_Store
 xcuserdata
 *.xcworkspace
+build
+.DS_Store
+
+
 
