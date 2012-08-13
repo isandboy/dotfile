@@ -7,3 +7,4 @@ _vim/ropevim/pylibs*
 .DS_Store
 xcuserdata
 *.xcworkspace
+tags

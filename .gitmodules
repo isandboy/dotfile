@@ -31,9 +31,9 @@
 [submodule "_vim/bundle/makegreen"]
 	path = _vim/bundle/makegreen
 	url = https://github.com/reinh/vim-makegreen
-[submodule "_vim/bundle/tasklist"]
-	path = _vim/bundle/tasklist
-	url = https://github.com/vim-scripts/TaskList.vim.git
+#[submodule "_vim/bundle/tasklist"]
+#	path = _vim/bundle/tasklist
+#	url = https://github.com/vim-scripts/TaskList.vim.git
 [submodule "_vim/bundle/nerdtree"]
 	path = _vim/bundle/nerdtree
 	url = https://github.com/vim-scripts/The-NERD-tree.git
@@ -64,3 +64,18 @@
 [submodule "_vim/bundle/pysmell"]
 	path = _vim/bundle/pysmell
 	url = https://github.com/orestis/pysmell.git
+[submodule "_vim/bundle/tagbar"]
+	path = _vim/bundle/tagbar
+	url = git://github.com/majutsushi/tagbar
+[submodule "_vim/bundle/supertab"]
+	path = _vim/bundle/supertab
+	url = git://github.com/ervandew/supertab
+[submodule "_vim/bundle/django.vim"]
+	path = _vim/bundle/django.vim
+	url = https://github.com/vim-scripts/django.vim.git
+#[submodule "_vim/bundle/vim-django"]
+#	path = _vim/bundle/vim-django
+#	url = https://github.com/vim-scripts/vim-django.git
+[submodule "_vim/bundle/vim-virtualenv.git"]
+	path = _vim/bundle/vim-virtualenv.git
+	url = https://github.com/jmcantrell/vim-virtualenv.git
