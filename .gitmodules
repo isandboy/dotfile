@@ -63,7 +63,7 @@
 	url = https://github.com/honza/snipmate-snippets.git
 [submodule "_vim/bundle/pysmell"]
 	path = _vim/bundle/pysmell
-	url = https://github.com/orestis/pysmell.git
+	url = https://github.com/aelam/pysmell.git
 [submodule "_vim/bundle/tagbar"]
 	path = _vim/bundle/tagbar
 	url = git://github.com/majutsushi/tagbar
@@ -79,3 +79,4 @@
 [submodule "_vim/bundle/vim-virtualenv.git"]
 	path = _vim/bundle/vim-virtualenv.git
 	url = https://github.com/jmcantrell/vim-virtualenv.git
+    ignore = dirty
