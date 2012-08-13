@@ -1,0 +1,2 @@
+supertab.vmb: call delete('/Users/ryan/.vim/doc/supertab.txt')|call delete('/Users/ryan/.vim/plugin/supertab.vim')
+tagbar.vmb: call delete('/Users/ryan/.vim/autoload/tagbar.vim')|call delete('/Users/ryan/.vim/doc/tagbar.txt')|call delete('/Users/ryan/.vim/plugin/tagbar.vim')|call delete('/Users/ryan/.vim/syntax/tagbar.vim')

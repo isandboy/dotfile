@@ -277,7 +277,8 @@ autocmd FileType html,xhtml,xml,css setlocal expandtab shiftwidth=2 tabstop=2 so
 
 " Python
 "au BufRead *.py compiler nose
-au FileType python set omnifunc=pythoncomplete#Complete
+"au FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType python setlocal omnifunc=pysmell#Complete
 au FileType python setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
 " Don't let pyflakes use the quickfix window
@@ -286,7 +287,8 @@ let g:pyflakes_use_quickfix = 0
 au FileType python set ft=python.django
 au FileType html set ft=htmldjango.html
 
-
+"let g:pydiction_location='./vim/plugin/pydiction/complete-dict'
+let g:pydiction_location="/Users/ryan/Dropbox/SystemConfiguration/dotfiles/_vim/plugin/pydiction/complete-dict"
 " Add the virtualenv's site-packages to vim path
 py << EOF
 import os.path
@@ -305,3 +307,31 @@ if filereadable($VIRTUAL_ENV . '/.vimrc')
 endif
 
 set colorcolumn=79
+
+let g:snips_author="Ryan Wang"
+
+
+""""""""""""""""""""""""""""""
+" Tagbar
+""""""""""""""""""""""""""""""
+let g:tagbar_ctags_bin = '/usr/local/bin/ctags'
+let g:tagbar_width = 30
+
+
+""""""""""""""""""""""""""""""
+" Tag list (ctags)
+" """"""""""""""""""""""""""""
+"if MySys() == "windows"                "设定windows系统中ctags程序的位置
+"    let Tlist_Ctags_Cmd = 'ctags'
+"elseif MySys() == "linux"              "设定linux系统中ctags程序的位置
+"    let Tlist_Ctags_Cmd = '/usr/bin/ctags'
+"else:
+"    let Tlist_Ctags_Cmd = 'ctags'
+"endif
+"let Tlist_Show_One_File = 1
+"不同时显示多个文件的tag，只显示当前文件的
+"let Tlist_Exit_OnlyWindow = 1
+"如果taglist窗口是最后一个窗口，则退出vim
+"let Tlist_Use_Right_Window = 1         "在右侧窗口中显示taglist窗口 
+
+
