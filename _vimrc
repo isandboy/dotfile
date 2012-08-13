@@ -287,6 +287,8 @@ let g:pyflakes_use_quickfix = 0
 au FileType python set ft=python.django
 au FileType html set ft=htmldjango.html
 
+let g:pydiction_location=".vim/bundle/pydiction/complete-dict"
+
 " Add the virtualenv's site-packages to vim path
 py << EOF
 import os.path
