@@ -7,6 +7,7 @@
 [submodule "_vim/bundle/git"]
 	path = _vim/bundle/git
 	url = https://github.com/tpope/vim-git.git
+    ignore = untracked
 [submodule "_vim/bundle/command-t"]
 	path = _vim/bundle/command-t
 	url = https://github.com/wincent/Command-T.git
@@ -34,12 +35,14 @@
 [submodule "_vim/bundle/nerdtree"]
 	path = _vim/bundle/nerdtree
 	url = https://github.com/vim-scripts/The-NERD-tree.git
+    ignore = untracked
 [submodule "_vim/bundle/ropevim"]
 	path = _vim/bundle/ropevim
 	url = https://github.com/sontek/rope-vim.git
 [submodule "_vim/bundle/acp"]
 	path = _vim/bundle/acp
 	url = https://github.com/vim-scripts/AutoComplPop.git
+    ignore = untracked
 [submodule "_vim/bundle/solarized"]
 	path = _vim/bundle/solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
@@ -66,7 +69,7 @@
 	url = git://github.com/majutsushi/tagbar
 [submodule "_vim/bundle/supertab"]
 	path = _vim/bundle/supertab
-	url = git://github.com/ervandew/supertab
+	url = git://github.com/ervandew/supertab.git
 [submodule "_vim/bundle/django.vim"]
 	path = _vim/bundle/django.vim
 	url = https://github.com/vim-scripts/django.vim.git
