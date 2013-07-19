@@ -58,12 +58,12 @@
 [submodule "_vim/bundle/tlib"]
 	path = _vim/bundle/tlib
 	url = https://github.com/tomtom/tlib_vim.git
-[submodule "_vim/bundle/snippets"]
-	path = _vim/bundle/snippets
-	url = https://github.com/honza/snipmate-snippets.git
-[submodule "_vim/bundle/pysmell"]
-	path = _vim/bundle/pysmell
-	url = https://github.com/aelam/pysmell.git
+#[submodule "_vim/bundle/snippets"]
+#	path = _vim/bundle/snippets
+#	url = https://github.com/honza/snipmate-snippets.git
+#[submodule "_vim/bundle/pysmell"]
+#	path = _vim/bundle/pysmell
+#	url = https://github.com/aelam/pysmell.git
 [submodule "_vim/bundle/tagbar"]
 	path = _vim/bundle/tagbar
 	url = git://github.com/majutsushi/tagbar
