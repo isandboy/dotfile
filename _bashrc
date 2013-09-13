@@ -45,7 +45,13 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-[ -f ~/.git-completion.bash ] && . ~/.git-completion.bash
+#[ -f ~/.git-completion.bash ] && . ~/.git-completion.bash
+
+# Homebrew Bash-completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi
+
 
 
 
@@ -72,7 +78,7 @@ parse_svn_repository_root() {
   svn info 2>/dev/null | sed -ne 's#^Repository Root: ##p'
 }
 
-export EDITOR=/usr/local/bin/vim
+export EDITOR=vim #/usr/local/bin/vim
 
 # SET LS_COLORS
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
@@ -105,9 +111,17 @@ fi
 #export PERL5LIB="$(xcode-select --print-path)/Library/Perl/5.12/darwin-thread-multi-2level"
 
 # Android
-export ANDROID_HOME=/usr/local/opt/android-sdk
+#export ANDROID_HOME=/usr/local/opt/android-edk
+export ANDROID_HOME=`brew --prefix android`
+# Gradle
+export GRADLE_HOME=/usr/local/opt/gradle/libexec
+export GRADLE_OPTS=-Xmx2048m
 
 #RBENV
 export RBENV_ROOT=/usr/local/var/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
 
