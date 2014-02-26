@@ -1,9 +1,8 @@
 #git config --global core.excludesfile ~/.gitignore_global 
 
 .DS_Store
-xcuserdata
+xcuserdata/
 *.xcworkspace
 build
-
-
-
+*.xcuserdatad
+*.pyc
