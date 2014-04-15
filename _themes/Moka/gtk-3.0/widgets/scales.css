@@ -1,0 +1,162 @@
+/* Copyright 2013 Sam Hewitt.
+*
+* This file is part of the Moka GTK theme.
+*
+* The Moka GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Moka GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Moka GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/**********
+ * Scales *
+ **********/
+
+.scale {
+    -GtkScale-slider-length: 16px;
+    -GtkRange-slider-width: 16px;
+    -GtkRange-trough-border: 0px;
+}
+
+.scale.slider,
+.scale.slider:hover,
+.scale.slider:insensitive,
+.scale.slider:backdrop {
+    border-radius: 0;
+    border-style: none;
+    background-color: transparent;
+    background-size: 16px 16px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: transparent;
+
+    /* Images in gtk-assets- variant */
+}
+
+/* Positive fill colors */
+.scale.highlight.left,
+.scale.vertical.highlight.bottom,
+.menubar .menuitem .scale.highlight.left,
+.menubar .menuitem.scale.highlight.bottom {
+    background-color: @selected_bg_color;
+    border-color: @selected_borders_color;
+    background-image: none;
+}
+
+/* Insensitive fill colors */
+.scale.highlight.left:insensitive,
+.scale.highlight.bottom:insensitive,
+.menubar .menuitem .scale.highlight.left:insensitive,
+.menubar .menuitem .scale.highlight.bottom:insensitive {
+    background-color: @insensitive_bg_color;
+    border-color: @insensitive_borders_color;
+    background-image: none;
+}
+
+/* Hover fill colors */
+.scale.highlight.left:hover,
+.scale.highlight.bottom:hover,
+.menubar .menuitem .scale.highlight.left:hover,
+.menubar .menuitem .scale.highlight.bottom:hover {
+    background-color: @selection_color;
+    border-color: @selected_borders_color;
+    background-image: none;
+}
+
+/* Unfocused fill colors */
+.scale.vertical.highlight.left:backdrop,
+.scale.vertical.highlight.bottom:backdrop,
+.menubar .menuitem.scale.highlight.left:backdrop,
+.menubar .menuitem.scale.highlight.bottom:backdrop {
+    background-color: @unfocused_bg_color;
+    border-color: @unfocused_borders_color;
+    background-image: none;
+}
+
+/***********
+ * Troughs *
+ ***********/
+
+/* Margins */
+.scale.trough {
+    border-width: 1px;
+    margin: 6px 0;
+}
+
+.scale.trough.vertical {
+    border-width: 1px;
+    margin: 0 6px;
+}
+
+/* Trough colors */
+.scale.trough,
+.scale.trough.vertical {
+    background-color: @bg_color;
+    border-color: @borders;
+}
+
+/* Hover trough colors */
+.scale.trough:hover,
+.scale.trough.vertical:hover {
+    background-color: @hover_bg_color;
+    border-color: @hover_borders_color;
+}
+
+/* Insensitive trough colors */
+.scale.trough:insensitive,
+.scale.trough.vertical:insensitive {
+    background-color: @insensitive_bg_color;
+    border-color: @insensitive_borders_color;
+}
+
+/* Unfocused trough colors */
+.scale.trough:backdrop,
+.scale.trough.vertical:backdrop {
+    background-color: @unfocused_bg_color;
+    border-color: @unfocused_borders_color; 
+}
+
+/****************
+ * Progress Bar *
+ ****************/
+.scale.progressbar
+.scale.progressbar.vertical {
+    border-width: 1px;
+    border-style: solid;
+    border-color: shade(@selected_bg_color, 0.8);
+    background-image: linear-gradient(to bottom,
+                                      @progressbar_bg_color_a,
+                                      @progressbar_bg_color_b
+                                      );
+}
+
+.scale.progressbar:insensitive,
+.scale.progressbar.vertical:insensitive {
+    border-width: 1px;
+    border-style: solid;
+    border-color: shade(@selected_bg_color, 0.8);
+    background-image: linear-gradient(to bottom,
+                                      @insensitive_progressbar_bg_color_a,
+                                      @insensitive_progressbar_bg_color_b
+                                      );
+}
+
+
+.scale.progressbar:backdrop,
+.scale.progressbar.vertical:backdrop {
+    border-width: 1px;
+    border-style: solid;
+    border-color: shade(@selected_bg_color, 0.8);
+    background-image: linear-gradient(to bottom,
+                                      @unfocused_progressbar_bg_color_a,
+                                      @unfocused_progressbar_bg_color_b
+                                      );
+}

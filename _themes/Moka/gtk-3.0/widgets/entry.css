@@ -1,0 +1,115 @@
+/* Copyright 2013 Sam Hewitt.
+*
+* This file is part of the Moka GTK theme.
+*
+* The Moka GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Moka GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Moka GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/*********
+ * Entry *
+ *********/
+.entry {
+    border-style: solid;
+    padding: 4px;
+    border-radius: 6px;
+    border-width: 1px;
+    border-color: @borders;
+    color: @text_color;
+    background-color: @base_color;
+    box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.1);
+    transition: border 100ms ease-out;
+}
+
+
+.entry:active,
+.entry:focus {
+    border-color: shade(@selected_bg_color, 1.1);
+    box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.1);
+    transition: all 100ms ease-in;
+}
+
+.entry:insensitive {
+    background-color: @insensitive_bg_color;
+    background-image: none;
+    color: @insensitive_text_color;
+    box-shadow: none;
+}
+
+.entry:selected {
+    color: @selected_fg_color;
+    background-color: @selected_bg_color;
+    border-color: @selected_bg_color;
+}
+
+.entry:backdrop {
+    background-color: @unfocused_bg_color;
+    color: @unfocused_text_color;
+    box-shadow: none;
+}
+
+.entry:insensitive:backdrop {
+    color: @unfocused_text_color;
+    box-shadow: none;
+    background-color: @unfocused_insensitive_bg_color;
+}
+
+.entry:selected:backdrop {
+    color: @unfocused_selected_fg_color;
+    background-color: @unfocused_selected_bg_color
+}
+
+.entry.progressbar,
+.entry.progressbar:focus {
+    margin-left: 2px;
+    margin-right: 2px;
+    border-image: none;
+    border-style: none;
+    background-color: transparent;
+    background-image: linear-gradient(to top, 
+                                      transparent 2px,
+                                      white 2px,
+                                      white 3px,
+                                      shade(@selected_bg_color, 0.9) 3px,
+                                      shade(@selected_bg_color, 0.9) 5px,
+                                      transparent 5px);
+    background-size: auto;
+    box-shadow: none;
+}
+
+.entry.progressbar.pulse,
+.entry.progressbar.pulse:focus {
+    background-image: linear-gradient(to top, 
+                                      transparent 2px,
+                                      white 2px,
+                                      white 3px,
+                                      @borders 3px,
+                                      @borders 5px,
+                                      transparent 5px);
+}
+
+.entry.progressbar:backdrop {
+    margin-left: 2px;
+    margin-right: 2px;
+    border-image: none;
+    border-style: none;
+    background-color: transparent;
+    background-image: linear-gradient(to top, 
+                                      transparent 2px,
+                                      white 2px,
+                                      white 3px,
+                                      @unfocused_selected_bg_color 3px,
+                                      @unfocused_selected_bg_color 5px,
+                                      transparent 5px);
+    box-shadow: none;
+}

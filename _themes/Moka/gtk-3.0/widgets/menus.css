@@ -1,0 +1,254 @@
+/* Copyright 2013 Sam Hewitt.
+*
+* This file is part of the Moka GTK theme.
+*
+* The Moka GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Moka GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Moka GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/********
+ * Menu *
+ ********/
+
+GtkTreeMenu.menu,
+GtkMenuToolButton.menu,
+GtkComboBox .menu {
+    background-color: @base_color;
+}
+
+.primary-toolbar .button .menu,
+.toolbar .menu,
+.toolbar .primary-toolbar .menu,
+.header-bar .menu,
+.header-bar .primary-toolbar .menu,
+.menu {
+    padding: 0;
+    border-radius: 0;
+    border-style: none;
+    background-color: @base_color;
+    color: @text_color;
+}
+
+/*************
+ * Menu Item *
+ *************/
+GtkTreeMenu .menuitem {
+    padding: 0;
+    border-width: 0;
+}
+
+GtkTreeMenu .menuitem * {
+    color: @text_color;
+}
+
+.menuitem,
+.menu .menuitem {
+    padding: 3px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    border-radius: 0;
+    background-color: transparent;
+    color: @text_color;
+
+    -GtkMenuItem-arrow-scaling: 0.5;
+}
+
+.menu .menuitem:active,
+.menu .menuitem:hover {
+    border-color: shade(@selected_bg_color, 0.9);
+    background-color: @selected_bg_color;
+    background-image: none;
+}
+
+.menu .menuitem:active,
+.menu .menuitem *:active,
+.menu .menuitem:hover,
+.menu .menuitem *:hover {
+    color: @selected_fg_color;
+}
+
+.menu .menuitem:insensitive,
+.menu .menuitem *:insensitive {
+    color: @insensitive_text_color;
+}
+
+.menuitem.check,
+.menuitem.radio,
+.menuitem.check:hover,
+.menuitem.radio:hover,
+.menuitem.check:insensitive,
+.menuitem.radio:insensitive {
+    border-style: none;
+    background-color: transparent;
+    background-image: none;
+}
+
+.menuitem.check:active,
+.menuitem.radio:active {
+    border-style: none;
+    background-color: transparent;
+}
+
+/* Arrow color */
+.menuitem.arrow {
+    color: alpha(@text_color, 0.6);
+}
+
+/* Separator color */
+.menuitem.separator {
+    border-style: none;
+    color: alpha(#000, 0.2); 
+    -GtkMenuItem-horizontal-padding: 0;
+    -GtkWidget-separator-height: 1;
+}
+
+.menuitem .entry {
+    border-color: @borders;
+    background-color: @base_color;
+    background-image: none;
+    color: @text_color;
+}
+
+.menuitem .entry:active,
+.menuitem .entry:focus {
+    border-color: @borders;
+}
+
+/* Accelerators */
+.menuitem .accelerator {
+    color: @insensitive_text_color;
+}
+
+.menuitem .accelerator:hover {
+    color: @insensitive_text_color;
+}
+
+.menuitem .accelerator:insensitive {
+    color: @insensitive_text_color;
+}
+
+
+/***********
+ * Menubar *
+ ***********/
+.menubar {
+    -GtkWidget-window-dragging: true;
+
+    border-style: none;
+    background-color: @bg_color;
+    background-image: none;
+    color: @fg_color;
+}
+
+.menubar.menuitem,
+.menubar .menuitem {
+    padding: 3px 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    background-color: transparent;
+    background-image: none;
+    color: @fg_color;
+}
+
+.menubar.menuitem:hover,
+.menubar .menuitem:hover,
+.menubar .menuitem *:hover {
+    border-color: @selected_borders_color;
+    background-color: @selected_bg_color;
+    background-image: none;
+    color: @selected_fg_color;
+}
+
+/* Separator */
+.menubar .menuitem.separator,
+.menubar.menuitem.separator {
+    -GtkMenuItem-horizontal-padding: 0;
+    -GtkWidget-separator-height: 1;
+    border-style: none;
+    color: alpha(#000, 0.2);
+}
+
+/*********************
+ * Unity Panel Menus *
+ *********************/
+
+.unity-panel.menuitem,
+.unity-panel .menuitem {
+    border-width: 0 1px;
+    color: @panel_text_color;
+}
+
+.unity-panel.menubar {
+    -GtkWidget-window-dragging: true;
+
+    border-style: none;
+    background-color: @panel_color;
+    background-image: none;
+    color: @panel_text_color;
+}
+
+.unity-panel.menubar.menuitem,
+.unity-panel.menubar .menuitem {
+    padding: 3px 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    background-color: transparent;
+    background-image: none;
+    color: @panel_text_color;
+}
+
+.unity-panel.menubar.menuitem:hover,
+.unity-panel.menubar .menuitem:hover {
+    border-radius: 4px 4px 0px 0px;
+    border-bottom: 0px;
+    border-color: shade(@panel_color, 0.7);
+    background-color: shade(@panel_color, 0.8);
+    color: @panel_text_color;
+}
+
+.unity-panel.menubar .menuitem *:hover {
+    color: @panel_text_color;
+}
+
+.unity-panel.menubar .menuitem.separator,
+.unity-panel.menubar.menuitem.separator {
+    -GtkMenuItem-horizontal-padding: 0;
+    -GtkWidget-separator-height: 1;
+    border-style: none;
+    color: alpha(#000, 0.2);
+}
+
+/*******************
+ * Checks & Radios *
+ *******************/
+
+.menuitem.check:active,
+.menuitem.check:active:hover,
+.menuitem.check:active:insensitive,
+.menuitem.check:inconsistent:hover,
+.menuitem.radio:inconsistent:hover ,
+.menuitem.check:inconsistent,
+.menuitem.radio:inconsistent,
+.menuitem.check:inconsistent:insensitive,
+.menuitem.radio:inconsistent:insensitive,
+.menuitem.radio:active,
+.menuitem.radio:active:hover,
+.menuitem.radio:active:insensitive {
+    background-size: 16px 16px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: transparent;
+}

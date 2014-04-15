@@ -1,0 +1,149 @@
+/* Copyright 2013 Sam Hewitt.
+*
+* This file is part of the Moka GTK theme.
+*
+* The Moka GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Moka GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Moka GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+
+/***********
+ * Buttons *
+ ***********/
+ 
+.button {
+    -GtkWidget-focus-padding: 1;
+    -GtkWidget-focus-line-width: 0;
+    
+    transition: border 100ms ease-in-out;
+
+    padding: 3px 2px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: @borders;
+    border-radius: 6px;
+    background-image: linear-gradient(to bottom,
+                                  @button_gradient_color_a,
+                                  @button_gradient_color_b
+                                  );
+    color: @text_color;
+}
+
+
+.button:focus,
+.button:active:hover,
+.button:hover:focus,
+.button:active:focus,
+.button:active:hover:focus {
+    border-color: @selected_bg_color;
+}
+
+
+.button:hover {
+    border-color: @hover_selection_color;
+    background-image: linear-gradient(to bottom,
+                                  @button_hover_gradient_color_a,
+                                  @button_hover_gradient_color_b
+                                  );
+}
+
+/* Active/Pressed Button */
+.button:active {
+    border-color: @selected_bg_color; 
+    background-image: linear-gradient(to bottom,
+                                  @button_active_gradient_color_a,
+                                  @button_active_gradient_color_b
+                                  );
+    color: @text_color;
+}
+
+
+/* Separator */
+.button .separator,
+.button.separator {
+    color: @borders;
+}
+
+.button .separator:insensitive,
+.button.separator:insensitive {
+    color: @insensitive_borders_color;
+}
+
+/* Insensitive Button */
+.button:insensitive {
+    border-color: @insensitive_borders_color;
+    background-color: @insensitive_bg_color;
+    background-image: none;
+}
+
+.button:active:insensitive {
+    border-color: @insensitive_borders_color;
+    background-color: @insensitive_bg_color;
+    background-image: linear-gradient(to bottom,
+                                  @button_insensitive_gradient_color_a,
+                                  @button_insensitive_gradient_color_b
+                                  );
+}
+
+/* Unfocused Button */
+.button:backdrop {
+    border-color: @unfocused_borders_color;
+    background-color: @unfocused_bg_color;
+    background-image: none;
+}
+
+.button:active:backdrop {
+    border-color: @unfocused_borders_color;
+    background-color: @unfocused_bg_color;
+    background-image: linear-gradient(to bottom,
+                                  @button_unfocused_gradient_color_a,
+                                  @button_unfocused_gradient_color_b
+                                  );
+}
+
+
+/* Default Button */
+.button.default {
+    border-color: @selected_bg_color;
+    color: @text_color;
+    background-image: linear-gradient(to bottom,
+                              @button_gradient_color_a,
+                              @button_gradient_color_b
+                              );
+}
+
+.button.default:hover {
+    border-color: @hover_selection_color;
+    color: @hover_text_color;
+    background-image: linear-gradient(to bottom,
+                                  @button_hover_gradient_color_a,
+                                  @button_hover_gradient_color_b
+                                  );
+}
+
+.button.default:active {
+    border-color: @selected_bg_color;
+    color: @active_text_color;
+    background-image: linear-gradient(to bottom,
+                              @button_active_gradient_color_a,
+                              @button_active_gradient_color_b
+                              );
+}
+
+.button.default:active:hover {
+    border-color:  @hover_selection_color;
+    background-image: linear-gradient(to bottom,
+                              @button_active_gradient_color_a,
+                              @button_active_gradient_color_b
+                              );
+}

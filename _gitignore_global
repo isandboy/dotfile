@@ -6,3 +6,4 @@ xcuserdata/
 build
 *.xcuserdatad
 *.pyc
+*.lock

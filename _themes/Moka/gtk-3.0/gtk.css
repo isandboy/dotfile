@@ -1,0 +1,48 @@
+/* Copyright 2013 Sam Hewitt.
+*
+* This file is part of the Moka GTK theme.
+*
+* The Moka GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Moka GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Moka GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+
+/**********
+ * Colors *
+ **********/
+
+/* Base colors */
+@define-color base_color #fefefe; /* Base color */
+@define-color bg_color #f7f7f7; /* Background color */
+@define-color fg_color #444; /* Foreground color */
+@define-color borders #bbb; /* Borders color */
+@define-color separator @borders; /* Separator color */
+@define-color text_color @fg_color; /* Text color */
+@define-color panel_color #444; /* Panel color */
+@define-color selection_color #a348b1; /* Selection color */
+@define-color gradient_color_a @bg_color; /* Gradient color A */
+@define-color gradient_color_b shade(@bg_color, 0.92); /* Gradient color B */
+@define-color view_bg_color #fff; /* View background */
+@define-color inactive_frame_color @borders; /* Inactive frame color */
+@define-color panel_text_color #ddd; /* Panel text color */
+
+/***********
+ * Imports *
+ ***********/
+
+/* Import Main CSS */
+@import url("gtk-common.css");
+@import url("gtk-widgets-assets.css");
+@import url("gtk-widgets-borders.css");
+@import url("gtk-fallback.css");
+@import url("gtk-widgets.css");

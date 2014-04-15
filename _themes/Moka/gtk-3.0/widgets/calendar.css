@@ -1,0 +1,68 @@
+/* Copyright 2013 Sam Hewitt.
+*
+* This file is part of the Moka GTK theme.
+*
+* The Moka GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Moka GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Moka GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/***********
+* Calendar *
+************/
+
+
+GtkCalendar,
+.menuitem GtkCalendar {
+    border-radius: 2px;
+    padding: 4px;
+    border-style: solid;
+    border-width: 1px;
+    background-color: transparent;
+    background-image: none;
+}
+
+.menuitem GtkCalendar:inconsistent {
+    color: mix(@text_color, @bg_color, 0.5);
+}
+
+GtkCalendar.view {
+    border-style: none;
+    background-color: transparent;
+    background-image: none;
+}
+
+GtkCalendar:inconsistent {
+    color: mix(@fg_color, @bg_color, 0.5);
+}
+
+GtkCalendar.button,
+GtkCalendar.button:hover,
+GtkCalendar.button:insensitive {
+
+}
+
+/* Header */
+GtkCalendar.header {
+    border-width: 1px;
+    border-color: alpha(@fg_color, 0.4);
+    background-color: alpha(@fg_color, 0.2);
+    background-image: none;
+    font-weight: bold;
+}
+
+/* Highlight */
+GtkCalendar.highlight {
+    border-width: 0;
+    background-color: transparent;
+    color: @selected_bg_color;
+}

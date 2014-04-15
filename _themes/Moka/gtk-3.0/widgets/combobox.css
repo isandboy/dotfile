@@ -1,0 +1,172 @@
+/* Copyright 2013 Sam Hewitt.
+*
+* This file is part of the Moka GTK theme.
+*
+* The Moka GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Moka GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Moka GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+
+/************
+ * Combobox *
+ ************/
+
+GtkComboBox {
+    padding: 0;
+
+    -GtkComboBox-arrow-scaling: 0.5;
+    -GtkComboBox-shadow-type: none;
+    color: @text_color;
+
+}
+
+GtkCombobox *:insensitive {
+    background-color: @insensitive_bg_color;
+    background-image: none;
+    color: @insensitive_text_color;
+}
+
+GtkCombobox *:selected {
+    color: @selected_fg_color;
+    background-color: @selected_bg_color;
+    border-color: @selected_bg_color;
+}
+
+GtkCombobox *:insensitive {
+    background-color: @insensitive_bg_color;
+    color: @insensitive_text_color;
+}
+
+GtkCombobox *:backdrop {
+    background-color: @unfocused_bg_color;
+    color: @unfocused_text_color;
+}
+
+GtkCombobox *:insensitive:backdrop {
+    color: mix(@unfocused_text_color, @insensitive_text_color, 0.2);
+}
+
+GtkCombobox *:selected:backdrop {
+    color: @unfocused_selected_fg_color;
+    background-color: @unfocused_selected_bg_color
+}
+
+
+GtkComboBox .separator {
+    /* always disable separators */
+    -GtkWidget-wide-separators: true;
+    -GtkWidget-horizontal-separator: 0;
+    -GtkWidget-vertical-separator: 0;
+}
+
+/******************
+ * Combobox Entry *
+ ******************/
+.primary-toolbar GtkComboBox.combobox-entry .entry:first-child,
+.primary-toolbar GtkComboBox.combobox-entry .button:first-child {
+    border-radius: 6px 0 0 6px;
+    border-right-width: 0;
+}
+
+.primary-toolbar GtkComboBox.combobox-entry .entry:last-child,
+.primary-toolbar GtkComboBox.combobox-entry .button:last-child {
+    border-radius: 0 6px 6px 0;
+    border-left-width: 0;
+}
+
+GtkComboBox.combobox-entry .entry:focus:first-child {
+    box-shadow: inset 1px 2px alpha(@selected_bg_color, 0.1),
+                inset 1px 1px alpha(@selected_bg_color, 0.1),
+                inset 0 -1px alpha(@selected_bg_color, 0.2);
+}
+
+GtkComboBox.combobox-entry .entry:focus:last-child {
+    box-shadow: inset -1px 2px alpha(@selected_bg_color, 0.1),
+                inset -1px 1px alpha(@selected_bg_color, 0.1),
+                inset 0 -1px alpha(@selected_bg_color, 0.2);
+}
+
+GtkComboBox.combobox-entry .button:backdrop:first-child,
+GtkComboBox.combobox-entry .button:backdrop:last-child {
+    box-shadow: none;
+}
+
+GtkComboBox.combobox-entry .button *:active,
+GtkComboBox.combobox-entry .button *:active:hover {
+    color: @text_color;
+}
+
+
+.primary-toolbar GtkComboBox.combobox-entry .entry,
+.primary-toolbar GtkComboBox.combobox-entry .entry:active,
+.primary-toolbar GtkComboBox.combobox-entry .entry:focus,
+.primary-toolbar GtkComboBox.combobox-entry .entry:insensitive,
+GtkComboBox.combobox-entry .entry,
+GtkComboBox.combobox-entry .entry:active,
+GtkComboBox.combobox-entry .entry:focus,
+GtkComboBox.combobox-entry .entry:insensitive {
+    border-right: 0px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.primary-toolbar GtkComboBox.combobox-entry .button,
+.primary-toolbar GtkComboBox.combobox-entry .button:hover,
+.primary-toolbar GtkComboBox.combobox-entry .button:active,
+.primary-toolbar GtkComboBox.combobox-entry .button:insensitive,
+GtkComboBox.combobox-entry .button,
+GtkComboBox.combobox-entry .button:hover,
+GtkComboBox.combobox-entry .button:active,
+GtkComboBox.combobox-entry .button:insensitive {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+GtkComboBox.combobox-entry:insensitive,
+GtkComboBox.combobox-entry .entry:insensitive,
+.primary-toolbar GtkComboBox.combobox-entry:insensitive,
+.primary-toolbar GtkComboBox.combobox-entry .entry:insensitive {
+    color: @insensitive_text_color;
+}
+   
+
+GtkComboBox.combobox-entry:insensitive {
+    background-color: @insensitive_bg_color;
+    background-image: none;
+    color: @insensitive_text_color;
+}
+
+GtkComboBox.combobox-entry:selected {
+    color: @selected_fg_color;
+    background-color: @selected_bg_color;
+    border-color: @selected_bg_color;
+}
+
+GtkComboBox.combobox-entry:insensitive {
+    background-color: @insensitive_bg_color;
+    color: @insensitive_text_color;
+}
+
+GtkComboBox.combobox-entry:backdrop {
+    background-color: @unfocused_bg_color;
+    color: @unfocused_text_color;
+}
+
+GtkComboBox.combobox-entry:insensitive:backdrop {
+    color: mix(@unfocused_text_color, @insensitive_text_color, 0.2);
+}
+
+GtkComboBox.combobox-entry:selected:backdrop {
+    color: @unfocused_selected_fg_color;
+    background-color: @unfocused_selected_bg_color
+} 

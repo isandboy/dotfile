@@ -68,3 +68,7 @@
 [submodule "_oh-my-zsh"]
 	path = _oh-my-zsh
 	url = https://github.com/aelam/oh-my-zsh
+[submodule "_vim/bundle/tlib"]
+	path = _vim/bundle/tlib
+	url = https://github.com/vim-scripts/tlib.git
+	branch = master

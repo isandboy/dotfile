@@ -1,0 +1,92 @@
+/* Copyright 2013 Sam Hewitt.
+*
+* This file is part of the Moka GTK theme.
+*
+* The Moka GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Moka GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Moka GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/***********
+ * Sidebar *
+ ***********/
+
+.sidebar,
+.sidebar.view,
+.sidebar .view,
+.sidebar GtkScrolledWindow {
+    background-color: @bg_color;
+    color: @fg_color;    
+    border: 0px;
+    border-style: solid;
+}
+
+.sidebar .frame {
+    border-color: @borders;
+    border-width: 0px 1px 1px 1px;
+}
+
+/* Insensitive */
+.sidebar:insensitive,
+.sidebar.view:insensitive,
+.sidebar .view:insensitive,
+.sidebar GtkScrolledWindow:insensitive {
+    background-color: @insensitive_bg_color;
+    color: @insensitive_fg_color;
+}
+
+.sidebar .frame:insensitive {
+    border-color: @insensitive_borders_color;
+}
+
+/* Backdrop */
+.sidebar:backdrop,
+.sidebar.view:backdrop,
+.sidebar .view:backdrop,
+.sidebar GtkScrolledWindow:backdrop {
+    background-color: @unfocused_bg_color;
+    color: @unfocused_fg_color;
+}
+
+.sidebar .frame:backdrop {
+    border-color: @unfocused_borders_color;
+}
+
+/* Separator */
+.sidebar.view.separator,
+.view.separator,
+.separator {
+    border-width: 0px;
+    border-style: solid;
+    border-color: @borders;
+    color: @base_color;
+}
+
+/* Selected */
+.sidebar.view:selected,
+.sidebar.view:hover:selected {
+    color: @base_color;
+    border-style: solid;
+    border-width: 0px;
+    background-color: @active_bg_color;
+}
+
+/* Selected Backdrop */
+.sidebar.view:selected:backdrop,
+.sidebar.view:hover:selected:backdrop {
+    background-color: @unfocused_selected_bg_color;
+}
+
+/* Hover */
+.sidebar.view:hover {
+    background-color: @hover_bg_color;
+}

@@ -1,0 +1,120 @@
+/* Copyright 2013 Sam Hewitt.
+*
+* This file is part of the Moka GTK theme.
+*
+* The Moka GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Moka GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Moka GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/***************
+ * Menu Button *
+ ***************/
+
+.menu.button {
+    background-image: none;
+    background-color: @base_color;
+    border-image: none;
+    border-color: @selected_bg_color; 
+}
+
+.menu.button.separator {
+    border-style: none;
+    color: shade(@fg_color, 3.2);    
+    -GtkMenuItem-horizontal-padding: 0;
+    -GtkWidget-separator-height: 1;
+}
+
+.menu.button:hover {
+    background-image: none;
+    background-color: @base_color;
+    color: @text_color;
+    border-image: none;
+    border-style: none;
+}
+
+.menu.button:insensitive {
+    background-color: @base_color;
+    color: lighter(@internal_element_color);
+
+    border-image: none;
+    border-style: none;
+}
+
+.menu.button:hover,
+.menu.button:active,
+.menu.button:active:insensitive,
+.menu.button:insensitive,
+.menu.button {
+    border-width: 0;
+    background-color: shade(@text_color, 1.05);
+    background-image: none;
+}
+
+
+.toolbar GtkMenuButton.button:active,
+.toolbar GtkMenuButton.button.raised:active,
+GtkMenuButton.button:active,
+.linked GtkMenuButton.button:active,
+.toolbar .linked.raised GtkMenuButton.button:active,
+.toolbar GtkMenuButton.button.linked.raised:active {
+    border-style: solid;
+    border-color: @selected_bg_color;
+    border-radius: 6px 6px 0px 0px;
+    border-width: 1px 1px 0px 1px;
+    background-image: linear-gradient(to bottom,
+                                  @button_active_gradient_color_a,
+                                  @button_active_gradient_color_b
+                                  );
+    color: @text_color;
+}
+
+GtkMenuButton.button *:active,
+.linked GtkMenuButton.button *:active,
+.toolbar .linked.raised GtkMenuButton.button *:active,
+.toolbar GtkMenuButton.button.linked.raised *:active {
+    text-shadow: none;
+    icon-shadow: none;
+}
+
+.linked GtkMenuButton.button:active:last-child,
+.toolbar .linked.raised GtkMenuButton.button:active:last-child,
+.toolbar GtkMenuButton.button.linked.raised:active:last-child {
+    border-top-left-radius: 0;
+}
+
+.linked GtkMenuButton.button:active:first-child,
+.toolbar .linked.raised GtkMenuButton.button:active:first-child,
+.toolbar GtkMenuButton.button.linked.raised:active:first-child {
+    border-top-right-radius: 0;
+}
+
+.button.menuitem.menubar:active {
+    background-image: none;
+    background-color: @bg_color;
+
+    border-radius: 6px 6px 0 0;
+    border-image: none;
+    border-width: 1px 1px 0 1px;
+    border-color: @bg_color;
+    border-style: solid;
+}
+
+.button.menuitem.menubar *:active,
+GtkMenuButton.button *:active,
+.toolbar GtkMenuButton.button *:active {
+    color: @text_color;
+}
+
+GtkMenuButton .menu {
+    text-shadow: none;
+}

@@ -1,0 +1,10 @@
+/************
+ * expander *
+ ************/
+.expander {
+    color: alpha(@fg_color, 0.7);
+}
+
+.expander:hover {
+    color: alpha(@fg_color, 0.8);
+}

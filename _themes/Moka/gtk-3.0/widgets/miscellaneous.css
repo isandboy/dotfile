@@ -1,0 +1,121 @@
+/* Copyright 2013 Sam Hewitt.
+*
+* This file is part of the Moka GTK theme.
+*
+* The Moka GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Moka GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Moka GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/*********************
+ * app notifications *
+ *********************/
+.app-notification {
+    border-style: solid;
+    border-color: @borders;
+    border-width: 0 1px 1px 1px;
+    border-radius: 0 0 2px 2px;
+    padding: 8px;
+    background-color: @base_color;
+    background-image: none;
+    color: @text_color;
+}
+
+/*********
+ * label *
+ *********/
+GtkLabel,
+GtkLabel:active,
+GtkLabel:insensitive {
+    background-color: transparent;
+}
+
+/************
+ * expander *
+ ************/
+.expander {
+    color: alpha(@fg_color, 0.7);
+}
+
+.expander:hover {
+    color: alpha(@fg_color, 0.8);
+}
+
+/*************
+ * assistant *
+ *************/
+GtkAssistant .sidebar .highlight {
+    font: bold;
+}
+
+GtkAssistant .sidebar {
+    padding: 3px;
+    border-width: 0 3px 0 0;
+    border-style: solid;
+    border-right-color: @borders;
+    border-radius: 0;
+    background-color: @bg_color;
+    color: mix(@fg_color, @bg_color, 0.1);
+}
+
+
+/***********
+ * gtkhtml *
+ ***********/
+GtkHTML {
+    background-color: @base_color;
+    color: @text_color;
+}
+
+/*************************
+ * touch text selections *
+ *************************/
+GtkBubbleWindow {
+    border-radius: 4px;
+    background-clip: border-box;
+}
+
+GtkBubbleWindow.osd.background {
+    background-color: @osd_bg;
+}
+
+GtkBubbleWindow .toolbar {
+    background-color: transparent;
+}
+
+
+/**/
+.view.dim-label,
+.dim-label,
+.dim-label:hover,
+.dim-label:focus {
+    color: mix(@fg_color, @bg_color, 0.5);
+}
+
+.dim-label:selected,
+.dim-label:selected:focus {
+    color: mix(@selected_fg_color, @selected_bg_color, 0.5);
+}
+
+.dnd {
+    border-width: 1px;
+    border-style: solid;
+    border-color: shade(@selected_bg_color, 0.9);
+}
+
+.grip {
+    background-color: transparent;
+}
+
+.arrow {
+    color: alpha(@fg_color, 0.7);
+}

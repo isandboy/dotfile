@@ -1,0 +1,139 @@
+/* Copyright 2013 Sam Hewitt.
+*
+* This file is part of the Moka GTK theme.
+*
+* The Moka GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Moka GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Moka GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/****************
+ * Progressbars *
+ ****************/
+ 
+GtkProgressBar {
+    padding: 0px;
+    border-width: 1px;
+    border-radius: 0px;
+}
+
+.progressbar,
+.progressbar row,
+.progressbar row:hover,
+.progressbar row:selected,
+.progressbar row:selected:focus,
+.progressbar.vertical,
+.progressbar.vertical row,
+.progressbar.vertical row:hover,
+.progressbar.vertical row:selected,
+.progressbar.vertical row:selected:focus {
+    border-width: 1px;
+    border-style: solid;
+    border-color: shade(@selected_bg_color, 0.8);
+    background-image: linear-gradient(to bottom,
+                                      @progressbar_bg_color_a,
+                                      @progressbar_bg_color_b
+                                      );
+}
+
+.progressbar:insensitive,
+.progressbar row:insensitive,
+.progressbar row:hover:insensitive,
+.progressbar row:selected:insensitive,
+.progressbar row:selected:focus:insensitive,
+.progressbar.vertical:insensitive,
+.progressbar.vertical row:insensitive,
+.progressbar.vertical row:hover:insensitive,
+.progressbar.vertical row:selected:insensitive,
+.progressbar.vertical row:selected:focus:insensitive {
+    border-width: 1px;
+    border-style: solid;
+    border-color: shade(@selected_bg_color, 0.8);
+    background-image: linear-gradient(to bottom,
+                                      @insensitive_progressbar_bg_color_a,
+                                      @insensitive_progressbar_bg_color_b
+                                      );
+}
+
+
+.progressbar:backdrop,
+.progressbar row:backdrop,
+.progressbar row:hover:backdrop,
+.progressbar row:selected:backdrop,
+.progressbar row:selected:focus:backdrop,
+.progressbar.vertical:backdrop,
+.progressbar.vertical row:backdrop,
+.progressbar.vertical row:hover:backdrop,
+.progressbar.vertical row:selected:backdrop,
+.progressbar.vertical row:selected:focus:backdrop {
+    border-width: 1px;
+    border-style: solid;
+    border-color: shade(@selected_bg_color, 0.8);
+    background-color: transparent;
+    background-image: linear-gradient(to bottom,
+                                      @unfocused_progressbar_bg_color_a,
+                                      @unfocused_progressbar_bg_color_b
+                                      );
+}
+
+
+/***********
+ * Troughs *
+ ***********/
+.trough,
+.trough row,
+.trough row:hover,
+.trough row:selected,
+.trough row:selected:focus {
+    border-width: 1px;
+    border-radius: 0px;
+    border-style: solid;
+    border-color: @borders;
+    background-image: linear-gradient(to bottom,
+                                      @trough_bg_color_a,
+                                      @trough_bg_color_b
+                                      );
+}
+
+.trough.vertical,
+.trough.vertical row,
+.trough.vertical row:selected,
+.trough.vertical row:selected:focus {
+    border-width: 1px;
+    border-radius: 0px;
+    border-style: solid;
+    border-color: @borders;
+    background-image: linear-gradient(to left,
+                                      @trough_bg_color_a,
+                                      @trough_bg_color_b
+                                      );
+}
+
+.trough:insensitive,
+.trough.vertical:insensitive {  
+    border-color: @insensitive_borders_color;
+    background-color: transparent;
+    background-image: linear-gradient(to bottom,
+                                  @insensitive_trough_bg_color_a,
+                                  @insensitive_trough_bg_color_b
+                                  );
+}
+
+.trough:backdrop,
+.trough.vertical:backdrop {
+    border-color: @unfocused_borders_color;
+    background-color: transparent;
+    background-image: linear-gradient(to bottom,
+                                  @backdrop_trough_bg_color_a,
+                                  @backdrop_trough_bg_color_b
+                                  ); 
+}

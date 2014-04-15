@@ -1,0 +1,113 @@
+/* Copyright 2013 Sam Hewitt.
+*
+* This file is part of the Moka GTK theme.
+*
+* The Moka GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Moka GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Moka GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+
+/*************
+ * GtkSwitch *
+ *************/
+
+GtkSwitch {
+    border-radius: 16px;
+    font: condensed;
+}
+
+/* Normal */
+GtkSwitch.trough {
+    color: @fg_color;
+    border-radius: 16px;
+    padding: 4px;
+    border-style: none;    
+    box-shadow: inset 0px 0px 0px 1px @borders;
+    background-image: linear-gradient(to bottom,
+                                      @trough_bg_color_a,
+                                      @trough_bg_color_b
+                                      );
+}
+
+GtkSwitch.slider {
+    border-width: 1px;
+    border-style: solid;
+    border-color: @borders;
+    background-image: linear-gradient(to bottom,
+                                      @button_gradient_color_b,
+                                      @button_gradient_color_a
+                                      );
+}
+
+
+/* Active */
+GtkSwitch.slider:active {
+    border-color: shade(@selected_bg_color, 0.8);
+    background-image: linear-gradient(to bottom,
+                                      @button_gradient_color_b,
+                                      @button_gradient_color_a
+                                      );
+}
+
+GtkSwitch.trough:active {
+    color: @selected_fg_color;
+    box-shadow: inset 0px 0px 0px 1px shade(@selected_bg_color, 0.8);
+    background-image: linear-gradient(to bottom,
+                                      @progressbar_bg_color_a,
+                                      @progressbar_bg_color_b
+                                      );
+    text-shadow: none;
+}
+
+
+/* Insensitive */
+GtkSwitch.slider:insensitive {
+    border-color: @insensitive_borders_color;
+    background-image: linear-gradient(to bottom,
+                                      @button_insensitive_gradient_color_b,
+                                      @button_insensitive_gradient_color_a
+                                      );
+}
+
+GtkSwitch.trough:insensitive,
+GtkSwitch.trough:active:insensitive {
+    color: @insensitive_text_color;
+    box-shadow: inset 0px 0px 0px 1px @insensitive_borders_color;
+    background-image: linear-gradient(to bottom,
+                                  @insensitive_trough_bg_color_a,
+                                  @insensitive_trough_bg_color_b
+                                  );
+    text-shadow: none;
+}
+
+
+
+/* Unfocused */
+GtkSwitch.slider:backdrop {
+    border-color: @unfocused_borders_color;
+    background-image: linear-gradient(to bottom,
+                                      @button_unfocused_gradient_color_b,
+                                      @button_unfocused_gradient_color_a
+                                      );
+}
+
+GtkSwitch.trough:backdrop,
+GtkSwitch.trough:active:backdrop {
+    color: @unfocused_text_color;
+    box-shadow: inset 0px 0px 0px 1px @unfocused_borders_color;
+    background-image: linear-gradient(to bottom,
+                                  @unfocused_trough_bg_color_a,
+                                  @unfocused_trough_bg_color_b
+                                  );
+    text-shadow: none;
+}
