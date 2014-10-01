@@ -55,10 +55,10 @@
 [submodule "_vim/bundle/supertab"]
 	path = _vim/bundle/supertab
 	url = git://github.com/ervandew/supertab.git
-[submodule "_vim/bundle/vim-virtualenv.git"]
-	path = _vim/bundle/vim-virtualenv.git
-	url = https://github.com/jmcantrell/vim-virtualenv.git
-    ignore = dirty
+#[submodule "_vim/bundle/vim-virtualenv.git"]
+#	path = _vim/bundle/vim-virtualenv.git
+#	url = https://github.com/jmcantrell/vim-virtualenv.git
+#    ignore = dirty
 [submodule "_vim/bundle/Tasklist.vim"]
 	path = _vim/bundle/Tasklist.vim
 	url = https://github.com/vim-scripts/TaskList.vim
@@ -68,7 +68,3 @@
 [submodule "_oh-my-zsh"]
 	path = _oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
-[submodule "_vim/bundle/tlib"]
-	path = _vim/bundle/tlib
-	url = https://github.com/vim-scripts/tlib.git
-	branch = master
