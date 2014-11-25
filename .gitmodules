@@ -71,3 +71,6 @@
 [submodule "_vim/bundle/vim-virtualenv"]
 	path = _vim/bundle/vim-virtualenv
 	url = https://github.com/jmcantrell/vim-virtualenv.git
+[submodule "_powerline"]
+	path = _powerline
+	url = git://github.com/Lokaltog/powerline.git

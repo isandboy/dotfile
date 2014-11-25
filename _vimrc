@@ -239,7 +239,8 @@ if has("gui_running")
     " Remove toolbar
     set guioptions-=T
 else
-    colorscheme torte
+"    colorscheme torte
+    colorscheme desert
 endif
 
 " Paste from clipboard
@@ -316,6 +317,8 @@ let g:snips_author="Ryan Wang"
 """"""""""""""""""""""""""""""
 let g:tagbar_ctags_bin = '/usr/local/bin/ctags'
 let g:tagbar_width = 30
+
+source $HOME/.powerline/powerline/bindings/vim/plugin/powerline.vim
 
 """""""""""""""""""""""""""""""
 " Django Settings
