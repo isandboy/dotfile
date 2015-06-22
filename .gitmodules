@@ -55,7 +55,7 @@
 [submodule "_vim/bundle/supertab"]
 	path = _vim/bundle/supertab
 	url = git://github.com/ervandew/supertab.git
-[submodule "_vim/bundle/vim-virtualenv.git"]
+#[submodule "_vim/bundle/vim-virtualenv.git"]
 #	path = _vim/bundle/vim-virtualenv.git
 #	url = https://github.com/jmcantrell/vim-virtualenv.git
 #    ignore = dirty
@@ -65,12 +65,6 @@
 [submodule "_vim/bundle/powerline"]
 	path = _vim/bundle/powerline
 	url = https://github.com/Lokaltog/vim-powerline
-[submodule "_oh-my-zsh"]
-	path = _oh-my-zsh
-	url = https://github.com/robbyrussell/oh-my-zsh.git
 [submodule "_vim/bundle/vim-virtualenv"]
 	path = _vim/bundle/vim-virtualenv
 	url = https://github.com/jmcantrell/vim-virtualenv.git
-[submodule "_powerline"]
-	path = _powerline
-	url = git://github.com/Lokaltog/powerline.git

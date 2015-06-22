@@ -318,7 +318,7 @@ let g:snips_author="Ryan Wang"
 let g:tagbar_ctags_bin = '/usr/local/bin/ctags'
 let g:tagbar_width = 30
 
-source $HOME/.powerline/powerline/bindings/vim/plugin/powerline.vim
+"source $HOME/.powerline/powerline/bindings/vim/plugin/powerline.vim
 
 """""""""""""""""""""""""""""""
 " Django Settings
