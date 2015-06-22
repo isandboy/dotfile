@@ -10,7 +10,7 @@
     ignore = untracked
 [submodule "_vim/bundle/command-t"]
 	path = _vim/bundle/command-t
-	url = https://github.com/wincent/Command-T.git
+	url = https://github.com/wincent/command-t.git
 [submodule "_vim/bundle/ack"]
 	path = _vim/bundle/ack
 	url = https://github.com/mileszs/ack.vim.git
@@ -68,3 +68,6 @@
 [submodule "_vim/bundle/vim-virtualenv"]
 	path = _vim/bundle/vim-virtualenv
 	url = https://github.com/jmcantrell/vim-virtualenv.git
+[submodule "_zgen"]
+	path = _zgen
+	url = https://github.com/tarjoilija/zgen.git
