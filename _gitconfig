@@ -14,7 +14,7 @@
 [core]
     editor = vim
     pager = less -R
-	excludesfile = /Users/ryan/.gitignore_global
+	excludesfile = ~/.gitignore_global
 
 [alias]
     diverges = !bash -c 'diff -u <(git rev-list --first-parent "${1}") <(git rev-list --first-parent "${2:-HEAD}") | sed -ne \"s/^ //p\" | head -1' -
@@ -49,9 +49,5 @@
 	keepBackup = true
 [merge]
 	tool = Kaleidoscope
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+[credential]
+	helper = osxkeychain
