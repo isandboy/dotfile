@@ -71,3 +71,12 @@
 [submodule "_zgen"]
 	path = _zgen
 	url = https://github.com/tarjoilija/zgen.git
+[submodule "powerline"]
+	path = powerline
+	url = https://github.com/powerline/powerline.git
+[submodule "_fonts"]
+	path = _fonts
+	url = https://github.com/powerline/fonts
+[submodule "bullet-train.zsh"]
+	path = bullet-train.zsh
+	url = https://github.com/caiogondim/bullet-train.zsh.git
